@@ -1,0 +1,7 @@
+<h1>Cadastro Shopping</h1>
+<%= form_for @shop, url:shopping_create_path do |f| %>
+	<%= f.label :name, 'Nome' %>
+	<%= f.text_field :name %>
+	<%= f.label :address, 'Endereço' %>
+	<%= f.text_field :address %> 
+<% end %>
