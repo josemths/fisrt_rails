@@ -1,0 +1,22 @@
+<h1>Todos os shopping</h1>
+
+<table style="width: 50%; margin: 50px auto;">
+	<tr style="background-color: #666666; color: #FFFFFF; padding: 30px;">
+		<td>
+			Nome
+		</td>
+		<td>
+			Altera
+		</td>
+		<td>
+			Remover
+		</td>
+	</tr>
+	<% @shops.each do |shop| %>
+	<tr <% if shop.id%2 == 0%>  style="background-color: #a0a0a0;" <%end%>>
+		<td><%= link_to shop.name, shopping_show_path(shop.id) %></td>
+		<td><%= link_to "Alterar", shopping_edit_path(shop.id) %></td>
+		<td>Remover</td>
+	</tr>
+	<% end %>
+</table>

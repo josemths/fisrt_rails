@@ -1,2 +1,8 @@
-<h1>Shopping#edit</h1>
-<p>Find me in app/views/shopping/edit.html.erb</p>
+<h1>Alterar Shopping</h1>
+<%= form_for @shop, url:shopping_update_path do |f| %>
+	<%= f.label :name, 'Nome' %>
+	<%= f.text_field :name %>
+	<%= f.label :address, 'Endereço' %>
+	<%= f.text_field :address %>
+	<%= f.submit 'Enviar' %>
+<% end %>
