@@ -16,7 +16,7 @@
 	<tr <% if shop.id%2 == 0%>  style="background-color: #a0a0a0;" <%end%>>
 		<td><%= link_to shop.name, shopping_show_path(shop.id) %></td>
 		<td><%= link_to "Alterar", shopping_edit_path(shop.id) %></td>
-		<td>Remover</td>
+		<td><%= link_to "Remover", shopping_destroy_path(shop.id), :method => 'delete' %></td>
 	</tr>
 	<% end %>
 </table>
